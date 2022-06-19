@@ -1,21 +1,19 @@
-#include<stdio.h> //Se corrige el sÌmbolo faltante
+#include<stdio.h> //Se corrige el s√≠mbolo faltante
 #include<conio.h>
 #include<string.h>
 #define dir "C:\\archivo.dat" 
-
 struct registro
 {
     int cliente;
     char nombre[20];
     float saldo;
 };
-
 FILE*arch;
-//Se aÒaden punteros
+//Se a√±aden punteros
 struct registro reg;
 char seguir;
 int i;
-//Se modifica la carga de datos para que se halle en un mÈtodo.
+//Se modifica la carga de datos para que se halle en un m√©todo.
 void carga_archivo(){
     arch = fopen(dir,"wb"); 
     if(arch == NULL) printf("No se pudo abrir el archivo"); 
@@ -35,14 +33,13 @@ void carga_archivo(){
     fclose(arch);
     getch();
 }
-
 void mostrar_archivo(){
     int total_cliente;
     float total_saldo;
     arch=fopen(dir,"rb"); 
     if (arch==NULL) printf("Error al abrir el archivo"); 
     total_cliente = 0; total_saldo = 0;
-    //Si bien el trabajo no especifica un formato, se le d· uno similar al del ejercicio 5.
+    //Si bien el trabajo no especifica un formato, se le d√° uno similar al del ejercicio 5.
     printf("\nID Cliente     Nombre          Saldo");
     while(!feof(arch))
 	{
